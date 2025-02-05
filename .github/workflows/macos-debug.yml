@@ -22,5 +22,7 @@ jobs:
     #  run: cargo test --verbose
     - name: Checkout code
       uses: actions/checkout@v4
-    - name: Setup Debug Session
-      uses: csexton/debugger-action@master
+    - name: setup debug session with sshx
+      run: curl -sSf https://sshx.io/get | sh -s run
+    #- name: Setup Debug Session
+    #  uses: csexton/debugger-action@master
